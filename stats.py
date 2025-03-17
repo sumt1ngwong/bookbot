@@ -1,9 +1,8 @@
 #Counting number of words within file
 def count_words(book_text):
     words = book_text.split()
-    return words
-    # number = len(words)
-    # return number
+    number = len(words)
+    return number
 
 def count_characters(book_text):
     #list_of_words = count_words(book_text)
@@ -24,6 +23,12 @@ def count_characters(book_text):
                 counter[char] = 1 
         return counter
 
+def sorted_dictionary(book_text):
+    unsorted_dict = count_characters(book_text)
+
+    sorted_list = sorted(unsorted_dict.items(), key=lambda item: item[1], reverse=True)
+    return sorted_list
+        
     
 
 
